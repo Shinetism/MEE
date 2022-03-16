@@ -14,6 +14,7 @@ Official PyTorch code for ALPRO. This repository supports pre-training as well a
 Our implementation is tested on Ubuntu 20.04.1 with NVIDIA A100 GPUs. Supports for other platforms and hardwares are possible with no warrant. To install the required packages:
 
 ```bash
+conda create -n MEE python=3.7
 cd env && bash install_pkg.sh
 ```
 
@@ -23,6 +24,8 @@ cd env && bash install_pkg.sh
     - [Checkpoints of pre-trained model and finetuned model](https://storage.googleapis.com/sfr-vision-language-research/ALPRO/output.zip)
     - [Externel resources](https://storage.googleapis.com/sfr-vision-language-research/ALPRO/ext.zip)
     - unzip `data.zip`, `output.zip`, `ext.zip` under `ALPRO/`.
+
+    **The Data is stored at /data/private/yangguang/*.zip**
  
 2. Download raw videos of downstream datasets.
    - MSRVTT:
@@ -37,7 +40,9 @@ cd env && bash install_pkg.sh
      - create the following soft link:
 
         ```bash
-        ln -s data/msrvtt_ret/videos data/msrvtt_qa/videos```
+        ln -s data/msrvtt_ret/videos data/msrvtt_qa/videos
+        ```
+      **The Data is stored at /data/private/yangguang/MSRVTT/*.zip**
     - MSVD:
       - download from official release:
   
